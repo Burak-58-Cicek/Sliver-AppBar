@@ -1,7 +1,11 @@
 # Sliver-AppBar
 `Resimler`
 
-[![Watch the video](https://github.com/Burak-58-Cicek/Sliver-AppBar/blob/main/resimler/slivervideo.mp4)](https://github.com/Burak-58-Cicek/Sliver-AppBar/blob/main/resimler/slivervideo.mp4)
+
+
+
+https://user-images.githubusercontent.com/96701355/151876678-88ad755e-609e-48af-989e-c8bd6ee5ae2d.mp4
+
 
 
 
