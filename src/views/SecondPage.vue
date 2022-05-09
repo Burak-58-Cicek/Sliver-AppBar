@@ -1,21 +1,36 @@
 <template>
-  <b-card title="Create Awesome 🙌">
-    <b-card-text>This is your second page.</b-card-text>
-    <b-card-text>Chocolate sesame snaps pie carrot cake pastry pie lollipop muffin. Carrot cake dragée chupa chups jujubes. Macaroon liquorice cookie wafer tart marzipan bonbon. Gingerbread jelly-o dragée chocolate.</b-card-text>
-  </b-card>
+  <div>
+    <b-container class="bv-example-row mb-3">
+      <b-row cols="6">
+        <b-col v-for="item in room" :key="item" cols-lg="6" class="m-2">
+          <b-card
+            title="Create Awesome 🙌"
+            bg-variant="primary"
+            text-variant="white"
+          >
+            <b-card-text>This is your second page.</b-card-text>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
 
 <script>
-import { BCard, BCardText } from 'bootstrap-vue'
+import { BCardGroup, BCard, BCardText, BContainer, BRow } from "bootstrap-vue";
 
 export default {
+  data: () => ({
+    room: 12,
+  }),
   components: {
     BCard,
+    BCardGroup,
     BCardText,
+    BContainer,
+    BRow,
   },
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

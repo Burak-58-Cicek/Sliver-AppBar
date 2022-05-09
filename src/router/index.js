@@ -12,8 +12,15 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('@/views/Home.vue'),
+      name: 'dashboard',
+      component: () => import('@/views/Dash.vue'),
+      beforeEnter(to, from, next) {
+        if (localStorage.getItem('userToken')) {
+          next()
+        } else {
+          next('/login')
+        }
+      },
       meta: {
         pageTitle: 'Home',
         breadcrumb: [
@@ -44,6 +51,13 @@ const router = new VueRouter({
       component: () => import('@/views/Login.vue'),
       meta: {
         layout: 'full',
+      },
+      beforeEnter(to, from, next) {
+        if (!localStorage.getItem('userToken')) {
+          next()
+        } else {
+          next('/')
+        }
       },
     },
     {

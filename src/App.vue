@@ -7,7 +7,7 @@
     <component :is="layout">
       <router-view />
     </component>
-tag
+
   </div>
 </template>
 
